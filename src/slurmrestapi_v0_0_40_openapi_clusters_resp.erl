@@ -1,0 +1,23 @@
+-module(slurmrestapi_v0_0_40_openapi_clusters_resp).
+
+-export([encode/1]).
+
+-export_type([slurmrestapi_v0_0_40_openapi_clusters_resp/0]).
+
+-type slurmrestapi_v0_0_40_openapi_clusters_resp() ::
+    #{ 'clusters' := list(),
+       'meta' => slurmrestapi_v0_0_40_openapi_meta:slurmrestapi_v0_0_40_openapi_meta(),
+       'errors' => list(),
+       'warnings' => list()
+     }.
+
+encode(#{ 'clusters' := Clusters,
+          'meta' := Meta,
+          'errors' := Errors,
+          'warnings' := Warnings
+        }) ->
+    #{ 'clusters' => Clusters,
+       'meta' => Meta,
+       'errors' => Errors,
+       'warnings' => Warnings
+     }.

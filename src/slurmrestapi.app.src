@@ -1,0 +1,18 @@
+{application, slurmrestapi,
+ [{description, "API to access and control Slurm"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+    [kernel,
+     stdlib,
+     ssl,
+     hackney,
+     ctx
+    ]},
+  {env, [{host, "localhost"}]},
+  {modules, []},
+
+  {maintainers, []},
+  {licenses, ["Apache 2.0"]},
+  {links, ["https://www.schedmd.com/"]}
+]}.

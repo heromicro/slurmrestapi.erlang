@@ -1,0 +1,77 @@
+-module(slurmrestapi_v0_0_40_assoc_rec_set).
+
+-export([encode/1]).
+
+-export_type([slurmrestapi_v0_0_40_assoc_rec_set/0]).
+
+-type slurmrestapi_v0_0_40_assoc_rec_set() ::
+    #{ 'comment' => binary(),
+       'defaultqos' => binary(),
+       'grpjobs' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'grpjobsaccrue' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'grpsubmitjobs' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'grptres' => list(),
+       'grptresmins' => list(),
+       'grptresrunmins' => list(),
+       'grpwall' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'maxjobs' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'maxjobsaccrue' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'maxsubmitjobs' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'maxtresminsperjob' => list(),
+       'maxtresrunmins' => list(),
+       'maxtresperjob' => list(),
+       'maxtrespernode' => list(),
+       'maxwalldurationperjob' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'minpriothresh' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'parent' => binary(),
+       'priority' => slurmrestapi_v0_0_40_uint32_no_val:slurmrestapi_v0_0_40_uint32_no_val(),
+       'qoslevel' => list(),
+       'fairshare' => integer()
+     }.
+
+encode(#{ 'comment' := Comment,
+          'defaultqos' := Defaultqos,
+          'grpjobs' := Grpjobs,
+          'grpjobsaccrue' := Grpjobsaccrue,
+          'grpsubmitjobs' := Grpsubmitjobs,
+          'grptres' := Grptres,
+          'grptresmins' := Grptresmins,
+          'grptresrunmins' := Grptresrunmins,
+          'grpwall' := Grpwall,
+          'maxjobs' := Maxjobs,
+          'maxjobsaccrue' := Maxjobsaccrue,
+          'maxsubmitjobs' := Maxsubmitjobs,
+          'maxtresminsperjob' := Maxtresminsperjob,
+          'maxtresrunmins' := Maxtresrunmins,
+          'maxtresperjob' := Maxtresperjob,
+          'maxtrespernode' := Maxtrespernode,
+          'maxwalldurationperjob' := Maxwalldurationperjob,
+          'minpriothresh' := Minpriothresh,
+          'parent' := Parent,
+          'priority' := Priority,
+          'qoslevel' := Qoslevel,
+          'fairshare' := Fairshare
+        }) ->
+    #{ 'comment' => Comment,
+       'defaultqos' => Defaultqos,
+       'grpjobs' => Grpjobs,
+       'grpjobsaccrue' => Grpjobsaccrue,
+       'grpsubmitjobs' => Grpsubmitjobs,
+       'grptres' => Grptres,
+       'grptresmins' => Grptresmins,
+       'grptresrunmins' => Grptresrunmins,
+       'grpwall' => Grpwall,
+       'maxjobs' => Maxjobs,
+       'maxjobsaccrue' => Maxjobsaccrue,
+       'maxsubmitjobs' => Maxsubmitjobs,
+       'maxtresminsperjob' => Maxtresminsperjob,
+       'maxtresrunmins' => Maxtresrunmins,
+       'maxtresperjob' => Maxtresperjob,
+       'maxtrespernode' => Maxtrespernode,
+       'maxwalldurationperjob' => Maxwalldurationperjob,
+       'minpriothresh' => Minpriothresh,
+       'parent' => Parent,
+       'priority' => Priority,
+       'qoslevel' => Qoslevel,
+       'fairshare' => Fairshare
+     }.

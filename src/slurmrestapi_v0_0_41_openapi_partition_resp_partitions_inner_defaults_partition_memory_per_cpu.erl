@@ -1,0 +1,20 @@
+-module(slurmrestapi_v0_0_41_openapi_partition_resp_partitions_inner_defaults_partition_memory_per_cpu).
+
+-export([encode/1]).
+
+-export_type([slurmrestapi_v0_0_41_openapi_partition_resp_partitions_inner_defaults_partition_memory_per_cpu/0]).
+
+-type slurmrestapi_v0_0_41_openapi_partition_resp_partitions_inner_defaults_partition_memory_per_cpu() ::
+    #{ 'set' => boolean(),
+       'infinite' => boolean(),
+       'number' => integer()
+     }.
+
+encode(#{ 'set' := Set,
+          'infinite' := Infinite,
+          'number' := Number
+        }) ->
+    #{ 'set' => Set,
+       'infinite' => Infinite,
+       'number' => Number
+     }.

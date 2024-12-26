@@ -1,0 +1,77 @@
+-module(slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association).
+
+-export([encode/1]).
+
+-export_type([slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association/0]).
+
+-type slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association() ::
+    #{ 'comment' => binary(),
+       'defaultqos' => binary(),
+       'grpjobs' => slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_grpjobs:slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_grpjobs(),
+       'grpjobsaccrue' => slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_grpjobsaccrue:slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_grpjobsaccrue(),
+       'grpsubmitjobs' => slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_grpsubmitjobs:slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_grpsubmitjobs(),
+       'grptres' => list(),
+       'grptresmins' => list(),
+       'grptresrunmins' => list(),
+       'grpwall' => slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_grpwall:slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_grpwall(),
+       'maxjobs' => slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_maxjobs:slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_maxjobs(),
+       'maxjobsaccrue' => slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_maxjobsaccrue:slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_maxjobsaccrue(),
+       'maxsubmitjobs' => slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_maxsubmitjobs:slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_maxsubmitjobs(),
+       'maxtresminsperjob' => list(),
+       'maxtresrunmins' => list(),
+       'maxtresperjob' => list(),
+       'maxtrespernode' => list(),
+       'maxwalldurationperjob' => slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_maxwalldurationperjob:slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_maxwalldurationperjob(),
+       'minpriothresh' => slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_minpriothresh:slurmrestapi_v0_0_41_openapi_users_add_cond_resp_association_condition_association_minpriothresh(),
+       'parent' => binary(),
+       'priority' => slurmrestapi_v0_0_41_openapi_slurmdbd_config_resp_associations_inner_priority:slurmrestapi_v0_0_41_openapi_slurmdbd_config_resp_associations_inner_priority(),
+       'qoslevel' => list(),
+       'fairshare' => integer()
+     }.
+
+encode(#{ 'comment' := Comment,
+          'defaultqos' := Defaultqos,
+          'grpjobs' := Grpjobs,
+          'grpjobsaccrue' := Grpjobsaccrue,
+          'grpsubmitjobs' := Grpsubmitjobs,
+          'grptres' := Grptres,
+          'grptresmins' := Grptresmins,
+          'grptresrunmins' := Grptresrunmins,
+          'grpwall' := Grpwall,
+          'maxjobs' := Maxjobs,
+          'maxjobsaccrue' := Maxjobsaccrue,
+          'maxsubmitjobs' := Maxsubmitjobs,
+          'maxtresminsperjob' := Maxtresminsperjob,
+          'maxtresrunmins' := Maxtresrunmins,
+          'maxtresperjob' := Maxtresperjob,
+          'maxtrespernode' := Maxtrespernode,
+          'maxwalldurationperjob' := Maxwalldurationperjob,
+          'minpriothresh' := Minpriothresh,
+          'parent' := Parent,
+          'priority' := Priority,
+          'qoslevel' := Qoslevel,
+          'fairshare' := Fairshare
+        }) ->
+    #{ 'comment' => Comment,
+       'defaultqos' => Defaultqos,
+       'grpjobs' => Grpjobs,
+       'grpjobsaccrue' => Grpjobsaccrue,
+       'grpsubmitjobs' => Grpsubmitjobs,
+       'grptres' => Grptres,
+       'grptresmins' => Grptresmins,
+       'grptresrunmins' => Grptresrunmins,
+       'grpwall' => Grpwall,
+       'maxjobs' => Maxjobs,
+       'maxjobsaccrue' => Maxjobsaccrue,
+       'maxsubmitjobs' => Maxsubmitjobs,
+       'maxtresminsperjob' => Maxtresminsperjob,
+       'maxtresrunmins' => Maxtresrunmins,
+       'maxtresperjob' => Maxtresperjob,
+       'maxtrespernode' => Maxtrespernode,
+       'maxwalldurationperjob' => Maxwalldurationperjob,
+       'minpriothresh' => Minpriothresh,
+       'parent' => Parent,
+       'priority' => Priority,
+       'qoslevel' => Qoslevel,
+       'fairshare' => Fairshare
+     }.
